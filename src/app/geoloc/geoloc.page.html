@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>geoloc</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="getGeoloc()">Watch Geoloc</ion-button>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>List geoloc</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let location of locationTraces">
+      <ion-label class="ion-text-wrap">
+        <ion-label>L'heure: {{location.timestamp | date:'d/M/yy, H:m:s'}}</ion-label>
+        <ion-label>Latitude: {{location.latitude}}</ion-label>
+        <ion-label>Longitude: {{location.longitude}}</ion-label>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

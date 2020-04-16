@@ -1,0 +1,17 @@
+#container {
+  text-align: center;
+
+  position: relative;
+  left: 0;
+  right: 0;
+  ion-card{
+    max-width: 600px;
+  }
+  ion-item.ion-activated{
+    cursor: pointer;
+  }
+}
+
+ion-content ion-toolbar {
+  --background: translucent;
+}
