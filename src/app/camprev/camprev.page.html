@@ -6,5 +6,16 @@
 </ion-header>
 
 <ion-content>
+    <div class="camera"></div>
+    <div class="optioncamera">
+        <ion-icon (click)="reversecamera()" size="large" name="camera-reverse-outline"></ion-icon>
+        <ion-icon (click)="negative()" size="large" name="camera-sharp"></ion-icon>
+    </div>
 
+    <ion-item>
+        <ion-range min="0" max="30" value="100" [(ngModel)]="setZoom" (ionChange)="changeZoom()">
+            <ion-icon slot="start" name="chevron-down-outline"></ion-icon>
+            <ion-icon slot="end" name="chevron-up-outline"></ion-icon>
+        </ion-range>
+    </ion-item>
 </ion-content>

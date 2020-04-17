@@ -1,0 +1,26 @@
+html, body, .ion-app, .ion-content {
+  background-color: transparent;
+}
+
+
+.camera {
+  position: relative;
+  top: 50px;
+  width: 100vw;
+  height: 100vw;
+  //background-color: red;
+}
+
+
+.optioncamera {
+  position: relative;
+  width: 100vw;
+  height: 75px;
+  text-align: center;
+  //background-color: blue;
+}
+
+.ion-icon{
+  height: 75px;
+  width: auto;
+}

@@ -8,6 +8,7 @@ import { CameraPreview, CameraPreviewPictureOptions, CameraPreviewOptions, Camer
 })
 export class CamprevPage implements OnInit {
 
+  setZoom = 0;
   constructor(private cameraPreview: CameraPreview) { }
 
   ngOnInit() {
@@ -21,17 +22,30 @@ export class CamprevPage implements OnInit {
   startCamera(){
     const cameraPreviewOpts: CameraPreviewOptions = {
       x: 0,
-      y: 0,
-      width: 300,
-      height: 300,
+      y: 50,
+      width: window.screen.width,
+      height: window.screen.width,
       camera: 'back',
       tapPhoto: true,
-      previewDrag: true,
+      previewDrag: false,
       toBack: false,
       alpha: 1
     };
-
-    const result = this.cameraPreview.startCamera(cameraPreviewOpts);
+    this.cameraPreview.startCamera(cameraPreviewOpts);
+    const result = this.cameraPreview;
     console.log(result);
+  }
+
+  reversecamera(){
+    this.cameraPreview.switchCamera();
+  }
+
+  changeZoom(){
+    // console.log(this.setZoom);
+    this.cameraPreview.setZoom(this.setZoom);
+  }
+
+  negative(){
+    this.cameraPreview.setColorEffect('negative');
   }
 }
